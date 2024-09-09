@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11AF37EE2C8F949900EB87BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF37ED2C8F949900EB87BE /* SearchViewController.swift */; };
 		11B561E62C8F165600292737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E52C8F165600292737 /* AppDelegate.swift */; };
 		11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E72C8F165600292737 /* SceneDelegate.swift */; };
 		11B561ED2C8F165600292737 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11B561EC2C8F165600292737 /* Base */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11AF37ED2C8F949900EB87BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		11B561E22C8F165600292737 /* NeshanAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B561E52C8F165600292737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B561E72C8F165600292737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				11B5621D2C8F1CDD00292737 /* MapViewController.swift */,
+				11AF37ED2C8F949900EB87BE /* SearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AF37EE2C8F949900EB87BE /* SearchViewController.swift in Sources */,
 				11B562252C8F393E00292737 /* LocationManager.swift in Sources */,
 				11B561E62C8F165600292737 /* AppDelegate.swift in Sources */,
 				11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */,
