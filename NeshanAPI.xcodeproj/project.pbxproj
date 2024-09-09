@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		11B561E62C8F165600292737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E52C8F165600292737 /* AppDelegate.swift */; };
 		11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E72C8F165600292737 /* SceneDelegate.swift */; };
-		11B561EA2C8F165600292737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E92C8F165600292737 /* ViewController.swift */; };
 		11B561ED2C8F165600292737 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11B561EC2C8F165600292737 /* Base */; };
 		11B561EF2C8F165800292737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B561EE2C8F165800292737 /* Assets.xcassets */; };
 		11B561F22C8F165800292737 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11B561F12C8F165800292737 /* Base */; };
 		11B561FD2C8F165800292737 /* NeshanAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561FC2C8F165800292737 /* NeshanAPITests.swift */; };
 		11B562072C8F165800292737 /* NeshanAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B562062C8F165800292737 /* NeshanAPIUITests.swift */; };
 		11B562092C8F165800292737 /* NeshanAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B562082C8F165800292737 /* NeshanAPIUITestsLaunchTests.swift */; };
+		11B5621E2C8F1CDD00292737 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5621D2C8F1CDD00292737 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		11B561E22C8F165600292737 /* NeshanAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B561E52C8F165600292737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B561E72C8F165600292737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11B561E92C8F165600292737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11B561EC2C8F165600292737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11B561EE2C8F165800292737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11B561F12C8F165800292737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		11B562022C8F165800292737 /* NeshanAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeshanAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B562062C8F165800292737 /* NeshanAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanAPIUITests.swift; sourceTree = "<group>"; };
 		11B562082C8F165800292737 /* NeshanAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		11B5621D2C8F1CDD00292737 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 		11B562162C8F18B200292737 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				11B561E92C8F165600292737 /* ViewController.swift */,
+				11B5621D2C8F1CDD00292737 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -306,9 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B561EA2C8F165600292737 /* ViewController.swift in Sources */,
 				11B561E62C8F165600292737 /* AppDelegate.swift in Sources */,
 				11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */,
+				11B5621E2C8F1CDD00292737 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
