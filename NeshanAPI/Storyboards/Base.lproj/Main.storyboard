@@ -66,10 +66,30 @@
                     <view key="view" contentMode="scaleToFill" id="IeF-hq-mT7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search here ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CG6-2q-3bw">
+                                <rect key="frame" x="20" y="20" width="353" height="44"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
+                                <color key="tintColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FDw-Qf-H5K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nt6-8I-lWa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CG6-2q-3bw" firstAttribute="top" secondItem="nt6-8I-lWa" secondAttribute="top" constant="20" id="fQA-eL-1Tz"/>
+                            <constraint firstItem="CG6-2q-3bw" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="jzc-A8-rLI"/>
+                            <constraint firstItem="nt6-8I-lWa" firstAttribute="trailing" secondItem="CG6-2q-3bw" secondAttribute="trailing" constant="20" id="tW7-Qk-e4Q"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pi8-9m-2c9"/>
+                    <connections>
+                        <outlet property="searchField" destination="CG6-2q-3bw" id="FBR-rK-iLa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWH-ax-1l3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,6 +104,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qDE-nb-Cpd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WDC-mZ-sVw"/>
                     </connections>
@@ -95,6 +118,9 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
