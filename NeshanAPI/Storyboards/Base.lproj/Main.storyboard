@@ -41,12 +41,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="WGQ-Wr-14c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7aI-NV-ri4"/>
                             <constraint firstItem="p1o-fq-UNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Bb3-7k-Mx4"/>
                             <constraint firstItem="WGQ-Wr-14c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Klg-eC-EWb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGQ-Wr-14c" secondAttribute="trailing" id="Ogb-hr-hnw"/>
                             <constraint firstAttribute="bottom" secondItem="WGQ-Wr-14c" secondAttribute="bottom" id="Xz3-dr-HXj"/>
+                            <constraint firstAttribute="trailing" secondItem="WGQ-Wr-14c" secondAttribute="trailing" id="dL3-4R-1T7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p1o-fq-UNu" secondAttribute="trailing" constant="60" id="dhF-CU-aHX"/>
+                            <constraint firstItem="WGQ-Wr-14c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kem-63-hWJ"/>
                             <constraint firstItem="p1o-fq-UNu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="sUn-gq-q4Q"/>
                         </constraints>
                     </view>
