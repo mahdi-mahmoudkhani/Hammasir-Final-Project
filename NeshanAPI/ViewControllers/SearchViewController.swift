@@ -10,6 +10,7 @@ import UIKit
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var SearchButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,10 @@ class SearchViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func SearchButtonTapped(_ sender: Any) {
+        
+        
+    }
 }
 
 extension SearchViewController: UITabBarDelegate, UITableViewDataSource {

@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search here ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CG6-2q-3bw">
-                                <rect key="frame" x="20" y="59" width="353" height="44"/>
+                                <rect key="frame" x="69" y="59" width="304" height="44"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <color key="tintColor" systemColor="placeholderTextColor"/>
                                 <constraints>
@@ -121,15 +121,29 @@
                                     <outlet property="delegate" destination="4Hu-dD-jjd" id="CFp-Aj-ZZG"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOl-l6-0wD">
+                                <rect key="frame" x="20" y="59" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="lFh-NC-TCG"/>
+                                    <constraint firstAttribute="width" constant="44" id="xAJ-mI-dN4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system" imagePadding="0.0" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="SearchButtonTapped:" destination="4Hu-dD-jjd" eventType="touchUpInside" id="ujH-FI-HX0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nt6-8I-lWa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="rOl-l6-0wD" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="0Pc-bf-F8x"/>
+                            <constraint firstItem="rOl-l6-0wD" firstAttribute="top" secondItem="nt6-8I-lWa" secondAttribute="top" constant="59" id="5KW-zl-wpR"/>
+                            <constraint firstItem="CG6-2q-3bw" firstAttribute="leading" secondItem="rOl-l6-0wD" secondAttribute="trailing" constant="5" id="A1f-8i-vos"/>
                             <constraint firstItem="CG6-2q-3bw" firstAttribute="top" secondItem="uCH-8y-Kqb" secondAttribute="bottom" constant="10" id="Fsp-0F-MLK"/>
                             <constraint firstItem="nt6-8I-lWa" firstAttribute="bottom" secondItem="S48-Nm-PwR" secondAttribute="bottom" constant="100" id="Ngf-Iq-Wr7"/>
                             <constraint firstItem="uCH-8y-Kqb" firstAttribute="centerX" secondItem="IeF-hq-mT7" secondAttribute="centerX" id="PYn-Pc-43a"/>
                             <constraint firstItem="nt6-8I-lWa" firstAttribute="trailing" secondItem="S48-Nm-PwR" secondAttribute="trailing" constant="20" id="gIu-kT-NRh"/>
-                            <constraint firstItem="CG6-2q-3bw" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="jzc-A8-rLI"/>
                             <constraint firstItem="S48-Nm-PwR" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="njS-QW-42O"/>
                             <constraint firstItem="uCH-8y-Kqb" firstAttribute="top" secondItem="nt6-8I-lWa" secondAttribute="top" constant="10" id="pqo-kE-caY"/>
                             <constraint firstItem="S48-Nm-PwR" firstAttribute="top" secondItem="CG6-2q-3bw" secondAttribute="bottom" constant="20" id="r9d-XG-QzX"/>
@@ -138,12 +152,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="pi8-9m-2c9"/>
                     <connections>
+                        <outlet property="SearchButton" destination="rOl-l6-0wD" id="pea-L4-QpL"/>
                         <outlet property="searchField" destination="CG6-2q-3bw" id="FBR-rK-iLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWH-ax-1l3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="-2"/>
+            <point key="canvasLocation" x="1864.885496183206" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Um-dX-htP">
