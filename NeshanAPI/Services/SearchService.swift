@@ -11,7 +11,7 @@ class SearchService {
     
     func search(for term: String, around userLocation: Location) async throws -> SearchResponse {
         
-        let endPoint = "\(APIConfig.baseURL)term=\(term)&lat=\(userLocation.y)&long=\(userLocation.x)"
+        let endPoint = "\(APIConfig.baseURL)term=\(term)&lat=\(userLocation.y)&lng=\(userLocation.x)"
         
         guard let url = URL(string: endPoint) else {
             throw URLError(.badURL)

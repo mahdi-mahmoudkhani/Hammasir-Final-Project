@@ -15,6 +15,9 @@ class SearchViewController: UIViewController {
     
     var userLocation: Location?
     
+    let searchService = SearchService()
+    var searchResults: [SearchResult] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,7 +31,18 @@ class SearchViewController: UIViewController {
     
     @IBAction func SearchButtonTapped(_ sender: Any) {
         
+        guard let query = searchField.text else { return }
         
+        Task {
+            do {
+                let response = try await self.searchService.search(for: query, around: userLocation!)
+                self.searchResults = response.items
+    
+            } catch {
+                print("Error: \(error)")
+            }
+            
+        }
     }
 }
 
