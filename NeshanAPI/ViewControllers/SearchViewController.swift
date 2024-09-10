@@ -23,6 +23,9 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.searchField.addTarget(self, action: #selector(UIViewController.dismissKeyboardTouchOutside), for: .editingDidEndOnExit)
+        
+        dismissKeyboard()
     }
     
     @IBAction func dismissView(_ sender: UIButton) {
@@ -66,4 +69,18 @@ extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
 
     }
 
+}
+
+
+extension UIViewController {
+    
+    func dismissKeyboard() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action:    #selector(UIViewController.dismissKeyboardTouchOutside))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboardTouchOutside() {
+        view.endEditing(true)
+    }
 }
