@@ -11,6 +11,7 @@
 		115B370B2C90A724000AFEE7 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370A2C90A724000AFEE7 /* SearchResult.swift */; };
 		115B370D2C90A86C000AFEE7 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370C2C90A86C000AFEE7 /* SearchResponse.swift */; };
 		115B370F2C90B5A2000AFEE7 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370E2C90B5A2000AFEE7 /* APIConfig.swift */; };
+		115B37112C90B763000AFEE7 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B37102C90B763000AFEE7 /* SearchService.swift */; };
 		11AF37EE2C8F949900EB87BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF37ED2C8F949900EB87BE /* SearchViewController.swift */; };
 		11B561E62C8F165600292737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E52C8F165600292737 /* AppDelegate.swift */; };
 		11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E72C8F165600292737 /* SceneDelegate.swift */; };
@@ -46,6 +47,7 @@
 		115B370A2C90A724000AFEE7 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		115B370C2C90A86C000AFEE7 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		115B370E2C90B5A2000AFEE7 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		115B37102C90B763000AFEE7 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		11AF37ED2C8F949900EB87BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		11B561E22C8F165600292737 /* NeshanAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B561E52C8F165600292737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			children = (
 				11B562242C8F393E00292737 /* LocationManager.swift */,
 				115B370E2C90B5A2000AFEE7 /* APIConfig.swift */,
+				115B37102C90B763000AFEE7 /* SearchService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				115B370D2C90A86C000AFEE7 /* SearchResponse.swift in Sources */,
 				115B370F2C90B5A2000AFEE7 /* APIConfig.swift in Sources */,
 				11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */,
+				115B37112C90B763000AFEE7 /* SearchService.swift in Sources */,
 				115B37032C90A198000AFEE7 /* Location.swift in Sources */,
 				11B5621E2C8F1CDD00292737 /* MapViewController.swift in Sources */,
 			);
