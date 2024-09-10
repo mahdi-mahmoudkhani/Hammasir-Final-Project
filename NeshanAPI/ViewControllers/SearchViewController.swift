@@ -23,3 +23,24 @@ class SearchViewController: UIViewController {
     }
     
 }
+
+extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") else {
+            return UITableViewCell()
+        }
+        cell.textLabel?.text = "Title"
+        cell.detailTextLabel?.text = "Detail"
+        
+        return cell
+
+    }
+
+}
