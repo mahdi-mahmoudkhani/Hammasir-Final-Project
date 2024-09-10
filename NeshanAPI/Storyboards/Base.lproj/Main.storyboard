@@ -154,6 +154,7 @@
                     <connections>
                         <outlet property="SearchButton" destination="rOl-l6-0wD" id="pea-L4-QpL"/>
                         <outlet property="searchField" destination="CG6-2q-3bw" id="FBR-rK-iLa"/>
+                        <outlet property="tableView" destination="S48-Nm-PwR" id="dMl-ag-bL1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vWH-ax-1l3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

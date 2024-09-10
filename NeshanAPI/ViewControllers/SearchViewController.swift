@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var SearchButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     var userLocation: Location?
     
@@ -37,7 +38,7 @@ class SearchViewController: UIViewController {
             do {
                 let response = try await self.searchService.search(for: query, around: userLocation!)
                 self.searchResults = response.items
-    
+                self.tableView.reloadData()
             } catch {
                 print("Error: \(error)")
             }
@@ -50,7 +51,7 @@ extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 10
+        return self.searchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,8 +59,8 @@ extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") else {
             return UITableViewCell()
         }
-        cell.textLabel?.text = "Title"
-        cell.detailTextLabel?.text = "Detail"
+        cell.textLabel?.text = self.searchResults[indexPath.row].title
+        cell.detailTextLabel?.text = self.searchResults[indexPath.row].address
         
         return cell
 
