@@ -35,7 +35,7 @@
                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="4Hu-dD-jjd" kind="presentation" id="rJi-q1-UCs"/>
+                                    <segue destination="4Hu-dD-jjd" kind="presentation" id="K9C-VF-Zko"/>
                                 </connections>
                             </button>
                         </subviews>

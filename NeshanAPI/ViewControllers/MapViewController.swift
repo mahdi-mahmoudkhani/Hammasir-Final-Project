@@ -11,7 +11,7 @@ import Combine
 
 class MapViewController: UIViewController {
 
-    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!    
     
     private var locationManager: LocationManager?
     private var cancellables = Set<AnyCancellable>()
@@ -37,5 +37,14 @@ class MapViewController: UIViewController {
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let searchVC = segue.destination as! SearchViewController
+        
+        let userLocation = Location( x: self.mapView.userLocation.coordinate.longitude,
+                                     y: self.mapView.userLocation.coordinate.latitude )
+        searchVC.userLocation = userLocation
+
+    }
 
 }

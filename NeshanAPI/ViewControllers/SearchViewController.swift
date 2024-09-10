@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import CoreLocation
 
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var SearchButton: UIButton!
+    
+    var userLocation: Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
