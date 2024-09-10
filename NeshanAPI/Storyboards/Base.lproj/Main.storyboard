@@ -68,7 +68,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search here ..." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CG6-2q-3bw">
-                                <rect key="frame" x="20" y="20" width="353" height="44"/>
+                                <rect key="frame" x="20" y="59" width="353" height="44"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor"/>
                                 <color key="tintColor" systemColor="placeholderTextColor"/>
                                 <constraints>
@@ -77,12 +77,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCH-8y-Kqb">
+                                <rect key="frame" x="151" y="10" width="91" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.compact.down" catalog="system" title="Back" imagePadding="4">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="dismissView:" destination="4Hu-dD-jjd" eventType="touchUpInside" id="dNU-EU-7M3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nt6-8I-lWa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CG6-2q-3bw" firstAttribute="top" secondItem="nt6-8I-lWa" secondAttribute="top" constant="20" id="fQA-eL-1Tz"/>
+                            <constraint firstItem="CG6-2q-3bw" firstAttribute="top" secondItem="uCH-8y-Kqb" secondAttribute="bottom" constant="10" id="Fsp-0F-MLK"/>
+                            <constraint firstItem="uCH-8y-Kqb" firstAttribute="centerX" secondItem="IeF-hq-mT7" secondAttribute="centerX" id="PYn-Pc-43a"/>
                             <constraint firstItem="CG6-2q-3bw" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="jzc-A8-rLI"/>
+                            <constraint firstItem="uCH-8y-Kqb" firstAttribute="top" secondItem="nt6-8I-lWa" secondAttribute="top" constant="10" id="pqo-kE-caY"/>
                             <constraint firstItem="nt6-8I-lWa" firstAttribute="trailing" secondItem="CG6-2q-3bw" secondAttribute="trailing" constant="20" id="tW7-Qk-e4Q"/>
                         </constraints>
                     </view>
@@ -117,6 +129,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.compact.down" catalog="system" width="128" height="42"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
