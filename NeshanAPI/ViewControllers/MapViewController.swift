@@ -46,11 +46,15 @@ class MapViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let searchVC = segue.destination as! SearchViewController
-        
-        let userLocation = Location( x: self.mapView.userLocation.coordinate.longitude,
-                                     y: self.mapView.userLocation.coordinate.latitude )
-        searchVC.userLocation = userLocation
+        if let searchVC = segue.destination as? SearchViewController, let sender = sender as? (CLLocationCoordinate2D, ( (([SearchResult])) -> () )) {
+            
+            searchVC.userLocation = Location( x: sender.0.longitude,
+                                         y: sender.0.longitude )
+            
+            searchVC.getBackResults = sender.1
+            
+            
+        }
 
     }
     

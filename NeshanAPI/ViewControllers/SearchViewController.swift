@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     
     var userLocation: Location?
     var areSavedResultsLoaded: Bool?
+    var getBackResults: ( (([SearchResult])) -> () )? = nil
     
     let searchPersistence = SearchPersistence()
     let searchService = SearchService()
@@ -52,6 +53,12 @@ class SearchViewController: UIViewController {
             }
             
         }
+    }
+    
+    @IBAction func showOnMap(_ sender: Any) {
+        
+        self.getBackResults?(self.searchResults)
+        self.dismiss(animated: true)
     }
 }
 
