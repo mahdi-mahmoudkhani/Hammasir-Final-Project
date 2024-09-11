@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111DB1DE2C91EC4200E17097 /* MapAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1DD2C91EC4200E17097 /* MapAnnotationManager.swift */; };
+		111DB1E02C92310400E17097 /* SearchPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1DF2C92310400E17097 /* SearchPersistence.swift */; };
+		111DB1E22C92367E00E17097 /* MapViewController+MapHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1E12C92367E00E17097 /* MapViewController+MapHandling.swift */; };
+		111DB1E62C9237A200E17097 /* MapViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1E52C9237A200E17097 /* MapViewController+Actions.swift */; };
+		111DB1E82C9238CC00E17097 /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1E72C9238CC00E17097 /* UIViewController+DismissKeyboard.swift */; };
+		111DB1EA2C92390D00E17097 /* SearchViewController+TableHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1E92C92390D00E17097 /* SearchViewController+TableHandling.swift */; };
+		111DB1EC2C92396600E17097 /* SearchViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1EB2C92396600E17097 /* SearchViewController+Actions.swift */; };
+		115B37032C90A198000AFEE7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B37022C90A198000AFEE7 /* Location.swift */; };
+		115B370B2C90A724000AFEE7 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370A2C90A724000AFEE7 /* SearchResult.swift */; };
+		115B370D2C90A86C000AFEE7 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370C2C90A86C000AFEE7 /* SearchResponse.swift */; };
+		115B370F2C90B5A2000AFEE7 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370E2C90B5A2000AFEE7 /* APIConfig.swift */; };
+		115B37112C90B763000AFEE7 /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B37102C90B763000AFEE7 /* SearchService.swift */; };
+		11AF37EE2C8F949900EB87BE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AF37ED2C8F949900EB87BE /* SearchViewController.swift */; };
 		11B561E62C8F165600292737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E52C8F165600292737 /* AppDelegate.swift */; };
 		11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E72C8F165600292737 /* SceneDelegate.swift */; };
-		11B561EA2C8F165600292737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561E92C8F165600292737 /* ViewController.swift */; };
 		11B561ED2C8F165600292737 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11B561EC2C8F165600292737 /* Base */; };
 		11B561EF2C8F165800292737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B561EE2C8F165800292737 /* Assets.xcassets */; };
 		11B561F22C8F165800292737 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 11B561F12C8F165800292737 /* Base */; };
 		11B561FD2C8F165800292737 /* NeshanAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B561FC2C8F165800292737 /* NeshanAPITests.swift */; };
 		11B562072C8F165800292737 /* NeshanAPIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B562062C8F165800292737 /* NeshanAPIUITests.swift */; };
 		11B562092C8F165800292737 /* NeshanAPIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B562082C8F165800292737 /* NeshanAPIUITestsLaunchTests.swift */; };
+		11B5621E2C8F1CDD00292737 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5621D2C8F1CDD00292737 /* MapViewController.swift */; };
+		11B562252C8F393E00292737 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B562242C8F393E00292737 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +50,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111DB1DD2C91EC4200E17097 /* MapAnnotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationManager.swift; sourceTree = "<group>"; };
+		111DB1DF2C92310400E17097 /* SearchPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPersistence.swift; sourceTree = "<group>"; };
+		111DB1E12C92367E00E17097 /* MapViewController+MapHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+MapHandling.swift"; sourceTree = "<group>"; };
+		111DB1E52C9237A200E17097 /* MapViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Actions.swift"; sourceTree = "<group>"; };
+		111DB1E72C9238CC00E17097 /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
+		111DB1E92C92390D00E17097 /* SearchViewController+TableHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+TableHandling.swift"; sourceTree = "<group>"; };
+		111DB1EB2C92396600E17097 /* SearchViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+Actions.swift"; sourceTree = "<group>"; };
+		115B37022C90A198000AFEE7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		115B370A2C90A724000AFEE7 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		115B370C2C90A86C000AFEE7 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		115B370E2C90B5A2000AFEE7 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		115B37102C90B763000AFEE7 /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		11AF37ED2C8F949900EB87BE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		11B561E22C8F165600292737 /* NeshanAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeshanAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B561E52C8F165600292737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B561E72C8F165600292737 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11B561E92C8F165600292737 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11B561EC2C8F165600292737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11B561EE2C8F165800292737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11B561F12C8F165800292737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +75,8 @@
 		11B562022C8F165800292737 /* NeshanAPIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeshanAPIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B562062C8F165800292737 /* NeshanAPIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanAPIUITests.swift; sourceTree = "<group>"; };
 		11B562082C8F165800292737 /* NeshanAPIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeshanAPIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		11B5621D2C8F1CDD00292737 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		11B562242C8F393E00292737 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +130,7 @@
 				11B562152C8F18A800292737 /* Models */,
 				11B562162C8F18B200292737 /* ViewControllers */,
 				11B562172C8F18C100292737 /* Storyboards */,
-				11B5621A2C8F18E400292737 /* Services */,
+				11B562232C8F387200292737 /* Services */,
 				11B562182C8F18CA00292737 /* Assets */,
 				11B562192C8F18D300292737 /* SupportingFiles */,
 			);
@@ -129,6 +157,9 @@
 		11B562152C8F18A800292737 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				115B37022C90A198000AFEE7 /* Location.swift */,
+				115B370A2C90A724000AFEE7 /* SearchResult.swift */,
+				115B370C2C90A86C000AFEE7 /* SearchResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -136,7 +167,13 @@
 		11B562162C8F18B200292737 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				11B561E92C8F165600292737 /* ViewController.swift */,
+				11B5621D2C8F1CDD00292737 /* MapViewController.swift */,
+				111DB1E52C9237A200E17097 /* MapViewController+Actions.swift */,
+				111DB1E12C92367E00E17097 /* MapViewController+MapHandling.swift */,
+				11AF37ED2C8F949900EB87BE /* SearchViewController.swift */,
+				111DB1EB2C92396600E17097 /* SearchViewController+Actions.swift */,
+				111DB1E92C92390D00E17097 /* SearchViewController+TableHandling.swift */,
+				111DB1E72C9238CC00E17097 /* UIViewController+DismissKeyboard.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -168,9 +205,14 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		11B5621A2C8F18E400292737 /* Services */ = {
+		11B562232C8F387200292737 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				11B562242C8F393E00292737 /* LocationManager.swift */,
+				115B370E2C90B5A2000AFEE7 /* APIConfig.swift */,
+				115B37102C90B763000AFEE7 /* SearchService.swift */,
+				111DB1DD2C91EC4200E17097 /* MapAnnotationManager.swift */,
+				111DB1DF2C92310400E17097 /* SearchPersistence.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -306,9 +348,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B561EA2C8F165600292737 /* ViewController.swift in Sources */,
+				111DB1EA2C92390D00E17097 /* SearchViewController+TableHandling.swift in Sources */,
+				11AF37EE2C8F949900EB87BE /* SearchViewController.swift in Sources */,
+				111DB1E22C92367E00E17097 /* MapViewController+MapHandling.swift in Sources */,
+				115B370B2C90A724000AFEE7 /* SearchResult.swift in Sources */,
+				11B562252C8F393E00292737 /* LocationManager.swift in Sources */,
+				111DB1E02C92310400E17097 /* SearchPersistence.swift in Sources */,
+				111DB1E62C9237A200E17097 /* MapViewController+Actions.swift in Sources */,
 				11B561E62C8F165600292737 /* AppDelegate.swift in Sources */,
+				115B370D2C90A86C000AFEE7 /* SearchResponse.swift in Sources */,
+				111DB1DE2C91EC4200E17097 /* MapAnnotationManager.swift in Sources */,
+				115B370F2C90B5A2000AFEE7 /* APIConfig.swift in Sources */,
+				111DB1EC2C92396600E17097 /* SearchViewController+Actions.swift in Sources */,
+				111DB1E82C9238CC00E17097 /* UIViewController+DismissKeyboard.swift in Sources */,
 				11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */,
+				115B37112C90B763000AFEE7 /* SearchService.swift in Sources */,
+				115B37032C90A198000AFEE7 /* Location.swift in Sources */,
+				11B5621E2C8F1CDD00292737 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +549,7 @@
 				DEVELOPMENT_TEAM = 5Q3Y63FUV7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeshanAPI/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your app to work.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -521,6 +578,7 @@
 				DEVELOPMENT_TEAM = 5Q3Y63FUV7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeshanAPI/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your app to work.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
