@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		111DB1DC2C90FADC00E17097 /* SearchPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1DB2C90FADC00E17097 /* SearchPersistence.swift */; };
+		111DB1DE2C91EC4200E17097 /* MapAnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111DB1DD2C91EC4200E17097 /* MapAnnotationManager.swift */; };
 		115B37032C90A198000AFEE7 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B37022C90A198000AFEE7 /* Location.swift */; };
 		115B370B2C90A724000AFEE7 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370A2C90A724000AFEE7 /* SearchResult.swift */; };
 		115B370D2C90A86C000AFEE7 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115B370C2C90A86C000AFEE7 /* SearchResponse.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		111DB1DB2C90FADC00E17097 /* SearchPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPersistence.swift; sourceTree = "<group>"; };
+		111DB1DD2C91EC4200E17097 /* MapAnnotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationManager.swift; sourceTree = "<group>"; };
 		115B37022C90A198000AFEE7 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		115B370A2C90A724000AFEE7 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		115B370C2C90A86C000AFEE7 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				11B562242C8F393E00292737 /* LocationManager.swift */,
 				115B370E2C90B5A2000AFEE7 /* APIConfig.swift */,
 				115B37102C90B763000AFEE7 /* SearchService.swift */,
+				111DB1DD2C91EC4200E17097 /* MapAnnotationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				11B562252C8F393E00292737 /* LocationManager.swift in Sources */,
 				11B561E62C8F165600292737 /* AppDelegate.swift in Sources */,
 				115B370D2C90A86C000AFEE7 /* SearchResponse.swift in Sources */,
+				111DB1DE2C91EC4200E17097 /* MapAnnotationManager.swift in Sources */,
 				115B370F2C90B5A2000AFEE7 /* APIConfig.swift in Sources */,
 				11B561E82C8F165600292737 /* SceneDelegate.swift in Sources */,
 				115B37112C90B763000AFEE7 /* SearchService.swift in Sources */,

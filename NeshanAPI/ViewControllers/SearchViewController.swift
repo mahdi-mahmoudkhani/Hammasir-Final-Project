@@ -12,9 +12,11 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var showOnMapButton: UIButton!
     
     var userLocation: Location?
     var areSavedResultsLoaded: Bool?
+    var getBackResults: ( (([SearchResult])) -> () )? = nil
     
     let searchPersistence = SearchPersistence()
     let searchService = SearchService()
@@ -53,13 +55,26 @@ class SearchViewController: UIViewController {
             
         }
     }
+    
+    @IBAction func showOnMap(_ sender: Any) {
+        
+        self.getBackResults?(self.searchResults)
+        self.dismiss(animated: true)
+    }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.searchResults.count
+        let numberOfResults = self.searchResults.count
+        if numberOfResults == 0 {
+            self.showOnMapButton.isEnabled = false
+            
+        } else {
+            self.showOnMapButton.isEnabled = true
+        }
+        return numberOfResults
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,7 +105,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UISwipeActionsConfiguration(actions: [saveAction])
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.getBackResults?([self.searchResults[indexPath.row]])
+        self.dismiss(animated: true)
+    }
 }
 
 
