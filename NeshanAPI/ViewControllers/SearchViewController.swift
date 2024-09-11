@@ -52,7 +52,7 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
