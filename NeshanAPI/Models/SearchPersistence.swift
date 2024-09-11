@@ -39,4 +39,11 @@ class SearchPersistence {
         }
     }
     
+    func appendSavedResults(_ newResults: [SearchResult]) {
+        
+        var savedResults = self.loadSavedResults()
+        savedResults.append(contentsOf: newResults)
+        self.saveSearchResults(savedResults)
+    }
+    
 }
