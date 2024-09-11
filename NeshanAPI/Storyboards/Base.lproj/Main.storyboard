@@ -25,7 +25,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1o-fq-UNu">
                                 <rect key="frame" x="289" y="64" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="Jff-1N-AGi"/>
+                                    <constraint firstAttribute="width" secondItem="p1o-fq-UNu" secondAttribute="height" multiplier="1:1" id="Fiw-C7-QT6"/>
                                     <constraint firstAttribute="height" constant="44" id="hIG-Z5-Od1"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="tertiarySystemFillColor"/>
@@ -43,7 +43,6 @@
                                 <rect key="frame" x="126" y="64" width="153" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="8hf-Yz-0Vg"/>
-                                    <constraint firstAttribute="width" constant="153" id="syJ-52-JKc"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="tertiarySystemFillColor"/>
                                 <state key="normal" title="Button"/>
@@ -61,6 +60,7 @@
                             <constraint firstItem="WGQ-Wr-14c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Klg-eC-EWb"/>
                             <constraint firstItem="UUt-oQ-bW4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Vra-81-YrG"/>
                             <constraint firstAttribute="bottom" secondItem="WGQ-Wr-14c" secondAttribute="bottom" id="Xz3-dr-HXj"/>
+                            <constraint firstItem="UUt-oQ-bW4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="bTZ-dk-lpU"/>
                             <constraint firstAttribute="trailing" secondItem="WGQ-Wr-14c" secondAttribute="trailing" id="dL3-4R-1T7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p1o-fq-UNu" secondAttribute="trailing" constant="60" id="dhF-CU-aHX"/>
                             <constraint firstItem="p1o-fq-UNu" firstAttribute="leading" secondItem="UUt-oQ-bW4" secondAttribute="trailing" constant="10" id="hwI-Dq-4jS"/>

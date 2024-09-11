@@ -82,7 +82,7 @@ class MapViewController: UIViewController {
     
     func setMapRegionToIncludeAllResultsAnnotations() {
         
-        var coordinates = self.mapView.annotations.map { $0.coordinate }
+        let coordinates = self.mapView.annotations.map { $0.coordinate }
         
         let polygon = MKPolygon(coordinates: coordinates, count: coordinates.count).boundingMapRect
         
