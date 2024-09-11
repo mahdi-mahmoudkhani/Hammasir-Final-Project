@@ -11,7 +11,6 @@ import CoreLocation
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
-    @IBOutlet weak var SearchButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     var userLocation: Location?
