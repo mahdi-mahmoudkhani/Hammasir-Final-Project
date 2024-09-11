@@ -10,8 +10,15 @@ import Combine
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
+    // MARK: - Published Properties
+    
     @Published var authorization: CLAuthorizationStatus?
+    
+    // MARK: - Stored Properties
+    
     private var locationManager: CLLocationManager?
+    
+    // MARK: - Initialization
     
     override init() {
         
@@ -19,6 +26,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.locationManager = CLLocationManager()
         self.locationManager!.delegate = self
     }
+    
+    // MARK: - Helper Methods
     
     private func checkLocationAuthorization() {
         
@@ -42,6 +51,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             break
         }
     }
+    
+    // MARK: - CLLocationManagerDelegate
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         
