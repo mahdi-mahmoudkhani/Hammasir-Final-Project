@@ -75,7 +75,17 @@ class MapViewController: UIViewController {
             self.mapView.addAnnotation(annotation)
             
         }
+        self.setMapRegionToIncludeAllResultsAnnotations()
         
+    }
+    
+    func setMapRegionToIncludeAllResultsAnnotations() {
+        
+        var coordinates = self.mapView.annotations.map { $0.coordinate }
+        
+        let polygon = MKPolygon(coordinates: coordinates, count: coordinates.count).boundingMapRect
+        
+        self.mapView.setVisibleMapRect(polygon, animated: true)
     }
 
 }
