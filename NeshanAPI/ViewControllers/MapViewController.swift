@@ -39,6 +39,11 @@ class MapViewController: UIViewController {
 
     }
     
+    @IBAction func goToSearchView(_ sender: Any) {
+        
+        performSegue(withIdentifier: "GoToSearchView", sender: (self.mapView.userLocation.coordinate, self.addAnnotations))
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let searchVC = segue.destination as! SearchViewController
