@@ -172,6 +172,7 @@
                     <navigationItem key="navigationItem" id="pi8-9m-2c9"/>
                     <connections>
                         <outlet property="searchField" destination="CG6-2q-3bw" id="FBR-rK-iLa"/>
+                        <outlet property="showOnMapButton" destination="bSG-cP-J3I" id="SJS-f2-XbX"/>
                         <outlet property="tableView" destination="S48-Nm-PwR" id="dMl-ag-bL1"/>
                     </connections>
                 </viewController>

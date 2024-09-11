@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var showOnMapButton: UIButton!
     
     var userLocation: Location?
     var areSavedResultsLoaded: Bool?
@@ -66,7 +67,14 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.searchResults.count
+        let numberOfResults = self.searchResults.count
+        if numberOfResults == 0 {
+            
+            self.showOnMapButton.isEnabled = false
+        }
+        
+        self.showOnMapButton.isEnabled = true
+        return numberOfResults
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
