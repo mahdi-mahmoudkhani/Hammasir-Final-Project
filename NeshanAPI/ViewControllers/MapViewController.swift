@@ -16,6 +16,8 @@ class MapViewController: UIViewController {
     private var locationManager: LocationManager?
     private var cancellables = Set<AnyCancellable>()
     
+    var mapAnnotationManager: MapAnnotationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +47,18 @@ class MapViewController: UIViewController {
                                      y: self.mapView.userLocation.coordinate.latitude )
         searchVC.userLocation = userLocation
 
+    }
+    
+    func addAnnotations(_ locations: [SearchResult]) {
+        
+        self.mapAnnotationManager = MapAnnotationManager()
+        let annotations = mapAnnotationManager!.addAnnotation(at: locations)
+        annotations.forEach { annotation in
+            
+            self.mapView.addAnnotation(annotation)
+            
+        }
+        
     }
 
 }
