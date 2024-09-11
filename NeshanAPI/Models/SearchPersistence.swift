@@ -11,7 +11,7 @@ class SearchPersistence {
     
     private let savedResultsKey = "savedSearchResults"
     
-    func saveSearchResults(_ results: [SearchResult]) {
+   private func saveSearchResults(_ results: [SearchResult]) {
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(results)
@@ -25,6 +25,7 @@ class SearchPersistence {
         
         guard let savedResults = UserDefaults.standard.object(forKey: savedResultsKey) as? Data else {
             
+            self.saveSearchResults( [] )
             return []
         }
         
