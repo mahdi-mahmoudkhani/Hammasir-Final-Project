@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
     
     var userLocation: Location?
     
+    let searchPersistence = SearchPersistence()
     let searchService = SearchService()
     var searchResults: [SearchResult] = []
     
@@ -24,6 +25,8 @@ class SearchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.searchField.addTarget(self, action: #selector(UIViewController.dismissKeyboardTouchOutside), for: .editingDidEndOnExit)
+        
+        self.searchResults = searchPersistence.loadSavedResults()
         
         dismissKeyboard()
     }
