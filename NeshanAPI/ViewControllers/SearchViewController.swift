@@ -97,7 +97,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UISwipeActionsConfiguration(actions: [saveAction])
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.getBackResults?([self.searchResults[indexPath.row]])
+        self.dismiss(animated: true)
+    }
 }
 
 
