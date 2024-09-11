@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var userLocation: Location?
+    var areSavedResultsLoaded: Bool?
     
     let searchPersistence = SearchPersistence()
     let searchService = SearchService()
@@ -26,6 +27,7 @@ class SearchViewController: UIViewController {
         self.searchField.addTarget(self, action: #selector(UIViewController.dismissKeyboardTouchOutside), for: .editingDidEndOnExit)
         
         self.searchResults = searchPersistence.loadSavedResults()
+        self.areSavedResultsLoaded = true
         
         dismissKeyboard()
     }
@@ -37,6 +39,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func SearchButtonTapped(_ sender: Any) {
         
+        self.areSavedResultsLoaded = false
         guard let query = searchField.text else { return }
         
         Task {
@@ -69,6 +72,23 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
 
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        if self.areSavedResultsLoaded! {
+            
+            return nil
+        }
+        
+        let saveAction = UIContextualAction(style: .normal, title: "Save") { action, view, completionHandler in
+            
+            self.searchPersistence.appendSavedResults([self.searchResults[indexPath.row]])
+            completionHandler(true)
+        }
+        saveAction.backgroundColor = .systemGreen
+        
+        return UISwipeActionsConfiguration(actions: [saveAction])
     }
 
 }
