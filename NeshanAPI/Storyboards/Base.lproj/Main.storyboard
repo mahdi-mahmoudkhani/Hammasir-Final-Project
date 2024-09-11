@@ -91,7 +91,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S48-Nm-PwR">
-                                <rect key="frame" x="20" y="123" width="353" height="619"/>
+                                <rect key="frame" x="20" y="123" width="353" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" textLabel="PP8-3w-xgH" detailTextLabel="1ZC-rc-Ef2" style="IBUITableViewCellStyleSubtitle" id="bEk-TL-vfM">
@@ -124,14 +124,25 @@
                                     <outlet property="delegate" destination="4Hu-dD-jjd" id="CFp-Aj-ZZG"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSG-cP-J3I">
+                                <rect key="frame" x="20" y="793" width="353" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show on Map"/>
+                                <connections>
+                                    <action selector="showOnMap:" destination="4Hu-dD-jjd" eventType="touchUpInside" id="qNf-Uv-fXa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nt6-8I-lWa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CG6-2q-3bw" firstAttribute="top" secondItem="uCH-8y-Kqb" secondAttribute="bottom" constant="10" id="Fsp-0F-MLK"/>
-                            <constraint firstItem="nt6-8I-lWa" firstAttribute="bottom" secondItem="S48-Nm-PwR" secondAttribute="bottom" constant="100" id="Ngf-Iq-Wr7"/>
+                            <constraint firstItem="nt6-8I-lWa" firstAttribute="bottom" secondItem="S48-Nm-PwR" secondAttribute="bottom" constant="60" id="Ngf-Iq-Wr7"/>
                             <constraint firstItem="uCH-8y-Kqb" firstAttribute="centerX" secondItem="IeF-hq-mT7" secondAttribute="centerX" id="PYn-Pc-43a"/>
+                            <constraint firstItem="nt6-8I-lWa" firstAttribute="trailing" secondItem="bSG-cP-J3I" secondAttribute="trailing" constant="20" id="cfJ-JW-jdg"/>
                             <constraint firstItem="nt6-8I-lWa" firstAttribute="trailing" secondItem="S48-Nm-PwR" secondAttribute="trailing" constant="20" id="gIu-kT-NRh"/>
+                            <constraint firstItem="nt6-8I-lWa" firstAttribute="bottom" secondItem="bSG-cP-J3I" secondAttribute="bottom" constant="10" id="h0x-wc-AcO"/>
+                            <constraint firstItem="bSG-cP-J3I" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="lc6-Qy-dfl"/>
                             <constraint firstItem="CG6-2q-3bw" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="mVP-jH-hHl"/>
                             <constraint firstItem="S48-Nm-PwR" firstAttribute="leading" secondItem="nt6-8I-lWa" secondAttribute="leading" constant="20" id="njS-QW-42O"/>
                             <constraint firstItem="uCH-8y-Kqb" firstAttribute="top" secondItem="nt6-8I-lWa" secondAttribute="top" constant="10" id="pqo-kE-caY"/>
