@@ -45,6 +45,12 @@ class MapViewController: UIViewController {
         performSegue(withIdentifier: "GoToSearchView", sender: (self.mapView.userLocation.coordinate, self.addAnnotations))
     }
     
+    @IBAction func clearResultsAnnotations(_ sender: Any) {
+        
+        self.mapView.removeAnnotations(self.mapView.annotations)
+        self.clearResultsButton.isHidden = true
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let searchVC = segue.destination as? SearchViewController, let sender = sender as? (CLLocationCoordinate2D, ( (([SearchResult])) -> () )) {

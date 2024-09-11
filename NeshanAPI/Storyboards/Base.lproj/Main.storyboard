@@ -50,6 +50,9 @@
                                 <buttonConfiguration key="configuration" style="filled" image="xmark" catalog="system" title="Clear Results" imagePadding="6">
                                     <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearResultsAnnotations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KwF-0O-JNn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
