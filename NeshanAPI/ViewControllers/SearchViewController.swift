@@ -69,11 +69,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         
         let numberOfResults = self.searchResults.count
         if numberOfResults == 0 {
-            
             self.showOnMapButton.isEnabled = false
+            
+        } else {
+            self.showOnMapButton.isEnabled = true
         }
-        
-        self.showOnMapButton.isEnabled = true
         return numberOfResults
     }
     
