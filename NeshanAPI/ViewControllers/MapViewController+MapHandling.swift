@@ -13,12 +13,14 @@ extension MapViewController {
         
         self.mapAnnotationManager = MapAnnotationManager()
         self.clearResultsButton.isHidden = false
-        let annotations = mapAnnotationManager!.addAnnotation(at: locations)
+        let annotations = self.mapAnnotationManager!.addAnnotation(at: locations)
+        
         annotations.forEach { annotation in
             
             self.mapView.addAnnotation(annotation)
             
         }
+        
         self.setMapRegionToIncludeAllResultsAnnotations()
         
     }

@@ -12,20 +12,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let numberOfResults = self.searchResults.count
-        if numberOfResults == 0 {
-            self.showOnMapButton.isEnabled = false
-            
-        } else {
-            self.showOnMapButton.isEnabled = true
-        }
+        self.showOnMapButton.isEnabled = numberOfResults != 0
+        
         return numberOfResults
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") else {
+            
             return UITableViewCell()
         }
+        
         cell.textLabel?.text = self.searchResults[indexPath.row].title
         cell.detailTextLabel?.text = self.searchResults[indexPath.row].address
         
@@ -45,6 +43,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             self.searchPersistence.appendSavedResults([self.searchResults[indexPath.row]])
             completionHandler(true)
         }
+        
         saveAction.backgroundColor = .systemGreen
         
         return UISwipeActionsConfiguration(actions: [saveAction])

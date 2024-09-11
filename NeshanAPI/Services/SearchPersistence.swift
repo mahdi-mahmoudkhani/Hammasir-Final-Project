@@ -12,13 +12,17 @@ class SearchPersistence {
     private let savedResultsKey = "savedSearchResults"
     
    private func saveSearchResults(_ results: [SearchResult]) {
+       
         do {
             let encoder = JSONEncoder()
             let data = try encoder.encode(results)
             UserDefaults.standard.set(data, forKey: savedResultsKey)
+            
         } catch {
+            
             print("Failed to save search results: \(error)")
         }
+       
     }
     
     func loadSavedResults() -> [SearchResult] {

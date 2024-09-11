@@ -23,15 +23,15 @@ class SearchViewController: UIViewController {
     var searchResults: [SearchResult] = []
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         self.searchField.addTarget(self, action: #selector(UIViewController.dismissKeyboardTouchOutside), for: .editingDidEndOnExit)
         
-        self.searchResults = searchPersistence.loadSavedResults()
+        self.searchResults = self.searchPersistence.loadSavedResults()
         self.areSavedResultsLoaded = true
         
-        dismissKeyboard()
+        self.dismissKeyboard()
     }
     
 }

@@ -20,18 +20,19 @@ class MapViewController: UIViewController {
     var mapAnnotationManager: MapAnnotationManager?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
+        super.viewDidLoad()
         self.locationManager = LocationManager()
         
         self.locationManager?.$authorization
             .sink { authorization in
-                if authorization == .denied || authorization == .restricted || authorization == .none{
+                
+                if authorization == .denied || authorization == .restricted || authorization == .none {
+                    
                     self.mapView.showsUserTrackingButton = false
                     
                 } else {
+                    
                     self.mapView.showsUserTrackingButton = true
                     self.mapView.userTrackingMode = .follow
                 }
@@ -44,14 +45,9 @@ class MapViewController: UIViewController {
         
         if let searchVC = segue.destination as? SearchViewController, let sender = sender as? (CLLocationCoordinate2D, ( (([SearchResult])) -> () )) {
             
-            searchVC.userLocation = Location( x: sender.0.longitude,
-                                         y: sender.0.latitude )
-            
+            searchVC.userLocation = Location( x: sender.0.longitude, y: sender.0.latitude )
             searchVC.getBackResults = sender.1
-            
-            
         }
-
     }
 
 }

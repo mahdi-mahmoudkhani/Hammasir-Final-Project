@@ -17,17 +17,18 @@ extension SearchViewController {
     @IBAction func SearchButtonTapped(_ sender: Any) {
         
         self.areSavedResultsLoaded = false
-        guard let query = searchField.text else { return }
+        guard let query = self.searchField.text else { return }
         
         Task {
             do {
-                let response = try await self.searchService.search(for: query, around: userLocation!)
+                let response = try await self.searchService.search(for: query, around: self.userLocation!)
                 self.searchResults = response.items
                 self.tableView.reloadData()
+                
             } catch {
-                print("Error: \(error)")
+                print(error)
+                
             }
-            
         }
     }
     
