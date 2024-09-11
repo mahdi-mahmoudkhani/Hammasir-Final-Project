@@ -42,6 +42,7 @@ class MapViewController: UIViewController {
     
     @IBAction func goToSearchView(_ sender: Any) {
         
+        self.clearResultsAnnotations(())
         performSegue(withIdentifier: "GoToSearchView", sender: (self.mapView.userLocation.coordinate, self.addAnnotations))
     }
     
