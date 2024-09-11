@@ -21,4 +21,22 @@ class SearchPersistence {
         }
     }
     
+    func loadSavedResults() -> [SearchResult] {
+        
+        guard let savedResults = UserDefaults.standard.object(forKey: savedResultsKey) as? Data else {
+            
+            return []
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            let data = try decoder.decode([SearchResult].self, from: savedResults)
+            return data
+            
+        } catch {
+            
+            return []
+        }
+    }
+    
 }
