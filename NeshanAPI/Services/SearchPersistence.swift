@@ -9,9 +9,13 @@ import Foundation
 
 class SearchPersistence {
     
+    // MARK: - Stored Properties
+    
     private let savedResultsKey = "savedSearchResults"
     
-   private func saveSearchResults(_ results: [SearchResult]) {
+    // MARK: - Helper Methods
+    
+    private func saveSearchResults(_ results: [SearchResult]) {
        
         do {
             let encoder = JSONEncoder()
@@ -19,10 +23,10 @@ class SearchPersistence {
             UserDefaults.standard.set(data, forKey: savedResultsKey)
             
         } catch {
-            
             print("Failed to save search results: \(error)")
+            
         }
-       
+        
     }
     
     func loadSavedResults() -> [SearchResult] {
@@ -30,6 +34,7 @@ class SearchPersistence {
         guard let savedResults = UserDefaults.standard.object(forKey: savedResultsKey) as? Data else {
             
             self.saveSearchResults( [] )
+            
             return []
         }
         

@@ -10,9 +10,13 @@ import CoreLocation
 
 class SearchViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var showOnMapButton: UIButton!
+    
+    // MARK: - Stored Properties
     
     var userLocation: Location?
     var areSavedResultsLoaded: Bool?
@@ -21,6 +25,8 @@ class SearchViewController: UIViewController {
     let searchPersistence = SearchPersistence()
     let searchService = SearchService()
     var searchResults: [SearchResult] = []
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         

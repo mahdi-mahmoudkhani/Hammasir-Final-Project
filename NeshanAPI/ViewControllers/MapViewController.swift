@@ -11,13 +11,19 @@ import Combine
 
 class MapViewController: UIViewController {
 
-    @IBOutlet weak var mapView: MKMapView!    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var clearResultsButton: UIButton!
+    
+    // MARK: - Stored Properties
     
     private var locationManager: LocationManager?
     private var cancellables = Set<AnyCancellable>()
     
     var mapAnnotationManager: MapAnnotationManager?
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         
@@ -40,6 +46,8 @@ class MapViewController: UIViewController {
             .store(in: &self.cancellables)
 
     }
+    
+    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
