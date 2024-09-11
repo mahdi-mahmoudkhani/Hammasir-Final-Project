@@ -12,6 +12,7 @@ import Combine
 class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!    
+    @IBOutlet weak var clearResultsButton: UIButton!
     
     private var locationManager: LocationManager?
     private var cancellables = Set<AnyCancellable>()
@@ -61,6 +62,7 @@ class MapViewController: UIViewController {
     func addAnnotations(_ locations: [SearchResult]) {
         
         self.mapAnnotationManager = MapAnnotationManager()
+        self.clearResultsButton.isHidden = false
         let annotations = mapAnnotationManager!.addAnnotation(at: locations)
         annotations.forEach { annotation in
             

@@ -39,20 +39,35 @@
                                     <segue destination="4Hu-dD-jjd" kind="presentation" identifier="GoToSearchView" id="K9C-VF-Zko"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-oQ-bW4">
+                                <rect key="frame" x="126" y="64" width="153" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8hf-Yz-0Vg"/>
+                                    <constraint firstAttribute="width" constant="153" id="syJ-52-JKc"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="tertiarySystemFillColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="xmark" catalog="system" title="Clear Results" imagePadding="6">
+                                    <color key="baseForegroundColor" systemColor="secondaryLabelColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WGQ-Wr-14c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Klg-eC-EWb"/>
+                            <constraint firstItem="UUt-oQ-bW4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="Vra-81-YrG"/>
                             <constraint firstAttribute="bottom" secondItem="WGQ-Wr-14c" secondAttribute="bottom" id="Xz3-dr-HXj"/>
                             <constraint firstAttribute="trailing" secondItem="WGQ-Wr-14c" secondAttribute="trailing" id="dL3-4R-1T7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p1o-fq-UNu" secondAttribute="trailing" constant="60" id="dhF-CU-aHX"/>
+                            <constraint firstItem="p1o-fq-UNu" firstAttribute="leading" secondItem="UUt-oQ-bW4" secondAttribute="trailing" constant="10" id="hwI-Dq-4jS"/>
                             <constraint firstItem="WGQ-Wr-14c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kem-63-hWJ"/>
                             <constraint firstItem="p1o-fq-UNu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="sUn-gq-q4Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nTa-Ih-xAk"/>
                     <connections>
+                        <outlet property="clearResultsButton" destination="UUt-oQ-bW4" id="lcL-mK-Hc2"/>
                         <outlet property="mapView" destination="WGQ-Wr-14c" id="S5p-UR-fWP"/>
                     </connections>
                 </viewController>
@@ -185,6 +200,7 @@
     <resources>
         <image name="chevron.compact.down" catalog="system" width="128" height="42"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
