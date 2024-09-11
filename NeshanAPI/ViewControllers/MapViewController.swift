@@ -40,18 +40,6 @@ class MapViewController: UIViewController {
 
     }
     
-    @IBAction func goToSearchView(_ sender: Any) {
-        
-        self.clearResultsAnnotations(())
-        performSegue(withIdentifier: "GoToSearchView", sender: (self.mapView.userLocation.coordinate, self.addAnnotations))
-    }
-    
-    @IBAction func clearResultsAnnotations(_ sender: Any) {
-        
-        self.mapView.removeAnnotations(self.mapView.annotations)
-        self.clearResultsButton.isHidden = true
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let searchVC = segue.destination as? SearchViewController, let sender = sender as? (CLLocationCoordinate2D, ( (([SearchResult])) -> () )) {
@@ -64,29 +52,6 @@ class MapViewController: UIViewController {
             
         }
 
-    }
-    
-    func addAnnotations(_ locations: [SearchResult]) {
-        
-        self.mapAnnotationManager = MapAnnotationManager()
-        self.clearResultsButton.isHidden = false
-        let annotations = mapAnnotationManager!.addAnnotation(at: locations)
-        annotations.forEach { annotation in
-            
-            self.mapView.addAnnotation(annotation)
-            
-        }
-        self.setMapRegionToIncludeAllResultsAnnotations()
-        
-    }
-    
-    func setMapRegionToIncludeAllResultsAnnotations() {
-        
-        let coordinates = self.mapView.annotations.map { $0.coordinate }
-        
-        let polygon = MKPolygon(coordinates: coordinates, count: coordinates.count).boundingMapRect
-        
-        self.mapView.setVisibleMapRect(polygon, animated: true)
     }
 
 }
