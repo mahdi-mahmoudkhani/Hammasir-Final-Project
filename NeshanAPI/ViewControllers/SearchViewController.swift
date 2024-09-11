@@ -11,11 +11,12 @@ import CoreLocation
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchField: UITextField!
-    @IBOutlet weak var SearchButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
     var userLocation: Location?
+    var areSavedResultsLoaded: Bool?
     
+    let searchPersistence = SearchPersistence()
     let searchService = SearchService()
     var searchResults: [SearchResult] = []
     
@@ -24,6 +25,9 @@ class SearchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.searchField.addTarget(self, action: #selector(UIViewController.dismissKeyboardTouchOutside), for: .editingDidEndOnExit)
+        
+        self.searchResults = searchPersistence.loadSavedResults()
+        self.areSavedResultsLoaded = true
         
         dismissKeyboard()
     }
@@ -35,6 +39,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func SearchButtonTapped(_ sender: Any) {
         
+        self.areSavedResultsLoaded = false
         guard let query = searchField.text else { return }
         
         Task {
@@ -50,7 +55,7 @@ class SearchViewController: UIViewController {
     }
 }
 
-extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -67,6 +72,23 @@ extension SearchViewController: UITabBarDelegate, UITableViewDataSource {
         
         return cell
 
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        if self.areSavedResultsLoaded! {
+            
+            return nil
+        }
+        
+        let saveAction = UIContextualAction(style: .normal, title: "Save") { action, view, completionHandler in
+            
+            self.searchPersistence.appendSavedResults([self.searchResults[indexPath.row]])
+            completionHandler(true)
+        }
+        saveAction.backgroundColor = .systemGreen
+        
+        return UISwipeActionsConfiguration(actions: [saveAction])
     }
 
 }
