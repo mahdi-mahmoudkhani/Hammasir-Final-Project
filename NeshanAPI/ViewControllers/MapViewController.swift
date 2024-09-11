@@ -56,7 +56,7 @@ class MapViewController: UIViewController {
         if let searchVC = segue.destination as? SearchViewController, let sender = sender as? (CLLocationCoordinate2D, ( (([SearchResult])) -> () )) {
             
             searchVC.userLocation = Location( x: sender.0.longitude,
-                                         y: sender.0.longitude )
+                                         y: sender.0.latitude )
             
             searchVC.getBackResults = sender.1
             
